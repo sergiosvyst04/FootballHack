@@ -3,5 +3,10 @@
         <file>main.qml</file>
         <file>Pages/BasePage.qml</file>
         <file>Singletons/Fonts.qml</file>
+        <file>Pages/StartedPage.qml</file>
+        <file>Singletons/qmldir</file>
+        <file>Singletons/Colors.qml</file>
+        <file>Components/ColoredButton.qml</file>
+        <file>Components/DescriptionText.qml</file>
     </qresource>
 </RCC>

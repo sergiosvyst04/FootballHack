@@ -1,22 +1,25 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
+import "Pages"
+import "Singletons"
 
 ApplicationWindow {
     visible: true
-    width: 640
-    height: 480
+    width: 350
+    height: 780
     title: qsTr("Hello World")
 
 
     StackView {
         id: rootStackView
         anchors.fill: parent
-//        initialItem:
+        initialItem: Qt.resolvedUrl("qrc:/Pages/StartedPage.qml")
         Keys.onBackPressed: {
 
         }
     }
+
 
 
 
