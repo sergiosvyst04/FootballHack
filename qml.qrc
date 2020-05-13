@@ -8,5 +8,9 @@
         <file>Singletons/Colors.qml</file>
         <file>Components/ColoredButton.qml</file>
         <file>Components/DescriptionText.qml</file>
+        <file>Pages/CreateAccountPage.qml</file>
+        <file>Components/LabeledTextEdit.qml</file>
+        <file>Components/StyledTextField.qml</file>
+        <file>Singletons/Utils.qml</file>
     </qresource>
 </RCC>

@@ -6,7 +6,7 @@ import "../Components"
 
 BasePage {
     nextButtonVisible: true
-    bgImage: "qrc:/images/assets/bright1.jpg"
+    bgImage: "qrc:/images/assets/icons/bright1.jpg"
 
     footer: Item {}
     header: Item {}

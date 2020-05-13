@@ -1,4 +1,4 @@
-import QtQuick 2.7
+import QtQuick 2.12
 
 pragma Singleton
 
@@ -19,7 +19,7 @@ QtObject {
 
     function nunitoSansDemiBold(size, letterSpacing){
         var font = Qt.font( {family: __nunitoSans, pixelSize: size} )
-        font.weight = Font.DemiBold
+        font.weight = Font.Medium
         font.letterSpacing = 3
         if(letterSpacing === undefined)
             font.letterSpacing = 3

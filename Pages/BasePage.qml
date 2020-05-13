@@ -8,6 +8,7 @@ Page {
     property string bgImage
     property string nextButtonText: qsTr("Next")
     property bool nextButtonVisible: false
+    property bool nextButtonEnabled: true
 
 
     signal nextButtonClicked()
@@ -24,15 +25,17 @@ Page {
     }
 
     header : Rectangle {
-        height: 42
+        height: 50
+        color: "transparent"
 
         ColoredButton {
             anchors {
                 left: parent.left
-                leftMargin: 20
+                leftMargin: 10
                 verticalCenter: parent.verticalCenter
             }
             color: "transparent"
+            fontColor: Colors.white
             back.border.width: 1
             back.border.color: Colors.white
 
@@ -46,19 +49,22 @@ Page {
         height: nextButtonVisible ? 100 : 0
         ColoredButton {
             id: nextButton
+
             width: 300
-            height: 55
+            height: 50
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: parent.top
             }
 
+            opacity: enabled ? 1 : 0.3
             visible: nextButtonVisible
             color: "transparent"
             back.border.width: 1
             back.border.color: Colors.white
+            enabled: nextButtonEnabled
 
-            font: Fonts.nunitoSansDemiBold(22)
+            font: Fonts.nunitoSans(19, 0)
             fontColor:  Colors.white
             text: nextButtonText
 

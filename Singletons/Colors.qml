@@ -7,4 +7,6 @@ QtObject {
     readonly property color secondaryColor: "#ADADAD"
     readonly property color secondaryColorWithOpacity: Qt.hsla(0, 0, 0.68, 0.54)
     readonly property color white: "white"
+    readonly property color approveTextColor: "#00FF0A"
+    readonly property color warningTextColor: "#F92323"
 }

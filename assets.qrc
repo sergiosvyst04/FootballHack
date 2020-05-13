@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/images">
-        <file>assets/bright1.jpg</file>
+        <file>assets/icons/519791-101_Warning-512.png</file>
+        <file>assets/icons/bright1.jpg</file>
+        <file>assets/icons/password__preview.png</file>
+        <file>assets/icons/password_preview_off.png</file>
     </qresource>
 </RCC>
