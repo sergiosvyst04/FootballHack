@@ -5,6 +5,6 @@ import "../Singletons"
 Text {
     horizontalAlignment: Text.AlignHCenter
     color: Colors.white
-    font: Fonts.openSans(16, Font.MixedCase)
+    font: Fonts.nunitoSans(16, Font.MixedCase)
     textFormat: Text.StyledText
 }

@@ -12,5 +12,10 @@
         <file>Components/LabeledTextEdit.qml</file>
         <file>Components/StyledTextField.qml</file>
         <file>Singletons/Utils.qml</file>
+        <file>Pages/CreateAccountNextPage.qml</file>
+        <file>Components/LocationCombobox.qml</file>
+        <file>Components/PopupActivationButton.qml</file>
+        <file>Components/BirthTumbler.qml</file>
+        <file>Components/TumblerSeparator.qml</file>
     </qresource>
 </RCC>
