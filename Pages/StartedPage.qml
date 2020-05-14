@@ -58,6 +58,7 @@ BasePage {
             font: Fonts.nunitoSans(19, 0)
             fontColor: Colors.white
             text: qsTr("Sign Up")
+            onClicked: navigateToItem("qrc:/Pages/CreateAccountPage.qml")
         }
 
         ColoredButton {

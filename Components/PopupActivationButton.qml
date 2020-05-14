@@ -34,7 +34,7 @@ ColumnLayout {
             horizontalAlignment: Text.AlignLeft
             leftPadding: 15
             text: btn.text
-            font: Fonts.nunitoSans(11)
+            font: Fonts.nunitoSans(12)
             color: Colors.white
         }
 
@@ -49,7 +49,7 @@ ColumnLayout {
             background: Rectangle {
                 anchors.fill: parent
                 color: Colors.secondaryColor
-                opacity: 0.7
+                opacity: 0.8
             }
 
             y: parent.height + 2

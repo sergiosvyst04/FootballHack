@@ -9,7 +9,7 @@ BasePage {
     nextButtonVisible: true
     nextButtonText: qsTr("Next")
     nextButtonEnabled: nicNameField.text.length > 2 && fullNameField.validated && emailField.validated && passwordField.validated
-    onNextButtonClicked: console.log("click")
+    onNextButtonClicked: navigateToItem("qrc:/Pages/CreateAccountNextPage.qml")
 
 
     ColumnLayout {

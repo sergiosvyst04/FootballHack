@@ -17,5 +17,7 @@
         <file>Components/PopupActivationButton.qml</file>
         <file>Components/BirthTumbler.qml</file>
         <file>Components/TumblerSeparator.qml</file>
+        <file>Pages/PlayerInfoPage.qml</file>
+        <file>Components/KindOfSportCheckBox.qml</file>
     </qresource>
 </RCC>

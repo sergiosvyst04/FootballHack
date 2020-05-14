@@ -42,6 +42,7 @@ Page {
             height: 30
             width: 50
             text: qsTr("Back")
+            onClicked: navigateBack()
         }
     }
 

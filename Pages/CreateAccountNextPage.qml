@@ -9,6 +9,7 @@ BasePage {
     bgImage: "qrc:/images/assets/icons/bright1.jpg"
     nextButtonVisible: true
     nextButtonText: qsTr("Next")
+    onNextButtonClicked: navigateToItem("qrc:/Pages/PlayerInfoPage.qml")
 
     ColumnLayout {
         anchors {

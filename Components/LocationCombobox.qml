@@ -6,7 +6,7 @@ import "../Components"
 
 ComboBox {
     id: root
-    font: Fonts.nunitoSans(14)
+    font: Fonts.nunitoSans(12)
 
 
     background: Rectangle {
@@ -73,7 +73,4 @@ ComboBox {
             opacity: 0.75
         }
     }
-
-
-
 }
