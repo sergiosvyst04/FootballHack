@@ -14,11 +14,6 @@ Rectangle {
     property var dateTime
     signal close
 
-    onDateTimeChanged: console.log("year : ", dateTime.getFullYear())
-
-    onDateChanged: console.log("date changed to : ", date)
-
-
     DescriptionText {
         text: qsTr("Date of birth")
         anchors {

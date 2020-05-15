@@ -12,6 +12,7 @@ ComboBox {
     background: Rectangle {
         anchors.fill: parent
         color: Colors.secondaryColorWithOpacity
+        opacity: enabled ? 1 : 0.4
     }
 
     indicator: Item {

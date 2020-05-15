@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 import "../Components"
 import "../Singletons"
+import LocationsModel 1.0
 
 
 BasePage {
@@ -11,6 +12,17 @@ BasePage {
     nextButtonText: qsTr("Next")
     onNextButtonClicked: navigateToItem("qrc:/Pages/PlayerInfoPage.qml",
                                         { payload : {nic: payload.nic, fullName: payload.fullName, email: payload.email, password: payload.password, countryResidence: countryComboBox.textAt(countryComboBox.currentIndex), cityResidence: cityComboBox.textAt(cityComboBox.currentIndex), dateOfBirth: birthTumbler.dateTime}})
+
+
+    LocationsModel {
+        id: countriesModel
+
+        Component.onCompleted: getCountries()
+    }
+
+    LocationsModel {
+        id: citiesModel
+    }
 
     ColumnLayout {
         anchors {
@@ -39,11 +51,12 @@ BasePage {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 50
                 currentIndex: -1
-                model: ["a", "b", "c", "d", "e"]
+                model: countriesModel
 
                 onActivated: {
                     currentIndex = index
-                    popup.close()
+                    cityComboBox.enabled = true
+                    citiesModel.getCities(countryComboBox.textAt(countryComboBox.currentIndex))
                 }
 
             }
@@ -61,7 +74,8 @@ BasePage {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 50
                 currentIndex: -1
-                model: ["A", "B", "C", "D", "E"]
+                model: citiesModel
+                enabled: false
             }
         }
 
