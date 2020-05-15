@@ -9,6 +9,7 @@ Page {
     property string nextButtonText: qsTr("Next")
     property bool nextButtonVisible: false
     property bool nextButtonEnabled: true
+    property var payload: ({})
 
 
     signal nextButtonClicked()

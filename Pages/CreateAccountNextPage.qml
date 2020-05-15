@@ -9,7 +9,8 @@ BasePage {
     bgImage: "qrc:/images/assets/icons/bright1.jpg"
     nextButtonVisible: true
     nextButtonText: qsTr("Next")
-    onNextButtonClicked: navigateToItem("qrc:/Pages/PlayerInfoPage.qml")
+    onNextButtonClicked: navigateToItem("qrc:/Pages/PlayerInfoPage.qml",
+                                        { payload : {nic: payload.nic, fullName: payload.fullName, email: payload.email, password: payload.password, countryResidence: countryComboBox.textAt(countryComboBox.currentIndex), cityResidence: cityComboBox.textAt(cityComboBox.currentIndex), dateOfBirth: birthTumbler.dateTime}})
 
     ColumnLayout {
         anchors {
@@ -34,6 +35,7 @@ BasePage {
             }
 
             LocationCombobox {
+                id: countryComboBox
                 Layout.fillWidth: true
                 Layout.preferredHeight: 50
                 currentIndex: -1
@@ -55,6 +57,7 @@ BasePage {
             }
 
             LocationCombobox {
+                id: cityComboBox
                 Layout.fillWidth: true
                 Layout.preferredHeight: 50
                 currentIndex: -1

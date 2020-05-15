@@ -70,7 +70,7 @@ ComboBox {
 
         background: Rectangle {
             color: Colors.secondaryColor
-            opacity: 0.75
+            opacity: 0.9
         }
     }
 }

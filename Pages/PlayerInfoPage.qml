@@ -8,6 +8,11 @@ BasePage {
     bgImage: "qrc:/images/assets/icons/bright1.jpg"
     nextButtonVisible: true
     nextButtonText: qsTr("Next")
+    onNextButtonClicked: navigateToItem("qrc:/Pages/BiographyPage.qml",
+                                        {payload: {fullName : payload.fullName, nic: payload.nic, email: payload.email, password : payload.password,
+                                            countryResidence: payload.countryResidence, cityResidence: payload.cityResidence, dateOfBirth: payload.dateOfBirth,
+                                            footballPositions: footballPositionsButton.text, futsalPositions: fusalPositionsButton.text, workingLeg: workingLegComboBox.textAt(workingLegComboBox.currentIndex)}})
+
 
     ColumnLayout {
         anchors {
@@ -123,6 +128,7 @@ BasePage {
             }
 
             LocationCombobox {
+                id: workingLegComboBox
                 Layout.fillWidth: true
                 Layout.preferredHeight: 50
 
@@ -205,8 +211,8 @@ BasePage {
                     Layout.alignment: Qt.AlignHCenter
                     Layout.preferredHeight: 40
                     Layout.preferredWidth: 80
-                    color: Colors.bgColor
-                    font: Fonts.nunitoSans(11)
+                    color: Colors.transparentColor
+                    font: Fonts.nunitoSansBold(20)
                     fontColor: Colors.white
                     text: qsTr("Ok")
                     onClicked: {

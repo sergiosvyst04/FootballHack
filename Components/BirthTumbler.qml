@@ -14,6 +14,10 @@ Rectangle {
     property var dateTime
     signal close
 
+    onDateTimeChanged: console.log("year : ", dateTime.getFullYear())
+
+    onDateChanged: console.log("date changed to : ", date)
+
 
     DescriptionText {
         text: qsTr("Date of birth")
@@ -192,8 +196,8 @@ Rectangle {
             d.setMonth(month.currentIndex)
             d.setDate(day.currentIndex + 1)
             dateTime = d
-
             date = Qt.formatDate(d, "d ") + monthModel.get(month.currentIndex).fullname + Qt.formatDate(d, " yyyy")
+
             close()
         }
 

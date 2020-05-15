@@ -19,7 +19,7 @@ QtObject {
 
     function nunitoSansDemiBold(size, letterSpacing){
         var font = Qt.font( {family: __nunitoSans, pixelSize: size} )
-        font.weight = Font.Medium
+        font.weight = Font.DemiBold
         font.letterSpacing = 3
         if(letterSpacing === undefined)
             font.letterSpacing = 3
