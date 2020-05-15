@@ -22,5 +22,6 @@
         <file>Pages/BiographyPage.qml</file>
         <file>Components/DatesSlider.qml</file>
         <file>Components/AddTeamButton.qml</file>
+        <file>Pages/LoginPage.qml</file>
     </qresource>
 </RCC>
