@@ -24,5 +24,7 @@
         <file>Components/AddTeamButton.qml</file>
         <file>Pages/LoginPage.qml</file>
         <file>Pages/HomePage.qml</file>
+        <file>Pages/ProfilePage.qml</file>
+        <file>Components/ProfileAvatarAndDataItem.qml</file>
     </qresource>
 </RCC>

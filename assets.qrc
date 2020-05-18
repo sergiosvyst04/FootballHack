@@ -6,6 +6,9 @@
         <file>assets/icons/password_preview_off.png</file>
         <file>assets/icons/HomePageBG.jpg</file>
         <file>assets/icons/search.png</file>
+        <file>assets/icons/Avatar.png</file>
+        <file>assets/icons/ProfilePageBG.jpg</file>
+        <file>assets/icons/settings_white.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

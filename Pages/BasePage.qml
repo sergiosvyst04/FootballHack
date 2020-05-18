@@ -9,6 +9,8 @@ Page {
     property string nextButtonText: qsTr("Next")
     property bool nextButtonVisible: false
     property bool nextButtonEnabled: true
+    property bool backButtonVisible: backButton.visible
+
     property var payload: ({})
 
 
@@ -30,11 +32,13 @@ Page {
         color: "transparent"
 
         ColoredButton {
+            id: backButton
             anchors {
                 left: parent.left
                 leftMargin: 10
                 verticalCenter: parent.verticalCenter
             }
+            visible: rootStackView.depth > 1
             color: "transparent"
             fontColor: Colors.white
             back.border.width: 1
