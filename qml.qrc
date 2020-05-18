@@ -23,5 +23,6 @@
         <file>Components/DatesSlider.qml</file>
         <file>Components/AddTeamButton.qml</file>
         <file>Pages/LoginPage.qml</file>
+        <file>Pages/HomePage.qml</file>
     </qresource>
 </RCC>
