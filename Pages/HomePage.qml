@@ -64,9 +64,9 @@ BasePage {
 
         Repeater {
             model: ListModel {
-                ListElement {text: qsTr("Profile")}
-                ListElement {text: qsTr("Create team")}
-                ListElement {text: qsTr("Life hacks")}
+                ListElement {text: qsTr("Profile"); destination: "qrc:/Pages/ProfilePage.qml" }
+                ListElement {text: qsTr("Create team"); destination: "qrc:/Pages/CreateTeamPage.qml" }
+                ListElement {text: qsTr("Life hacks"); destination: ""}
             }
 
             delegate: ColoredButton {
@@ -77,6 +77,7 @@ BasePage {
                 font: Fonts.nunitoSans(25)
                 fontColor: Colors.white
                 text: model.text
+                onClicked: navigateToItem(model.destination)
             }
         }
     }

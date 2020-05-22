@@ -20,6 +20,8 @@ BasePage {
         Component.onCompleted: getCountries()
     }
 
+
+
     LocationsModel {
         id: citiesModel
     }

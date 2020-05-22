@@ -1,6 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <core/Models/LocationsModel.hpp>
+#include <core/Models/playerssortfiltermodel.h>
+#include <QtQml>
+
 
 int main(int argc, char *argv[])
 {
@@ -8,8 +11,8 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-
     qmlRegisterType<LocationsModel>("LocationsModel", 1, 0, "LocationsModel");
+    qmlRegisterType<PlayersSortFilterModel>("PlayerSortFilterModel", 1, 0, "PlayerSortFilterModel");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));

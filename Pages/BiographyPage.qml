@@ -8,7 +8,10 @@ BasePage {
     bgImage: "qrc:/images/assets/icons/bright1.jpg"
     nextButtonVisible: true
     nextButtonText: qsTr("Create Account")
-    onNextButtonClicked: fillTeams()
+    onNextButtonClicked: {
+        fillTeams()
+        navigateToItem("qrc:/Pages/HomePage.qml")
+    }
 
     property var teams: []
 
@@ -24,11 +27,11 @@ BasePage {
     }
 
 
-//    Component.onCompleted: {
-//        console.log("Full name : ", payload.fullName, " , nic : ", payload.nic, " , email : ", payload.email)
-//        console.log("country residence : ", payload.countryResidence, ", city residence : ", payload.cityResidence, "date of birth : ", Qt.formatDate(payload.dateOfBirth, "d/M/YYYY"))
-//        console.log("football positions : ", payload.footballPositions, "futsalPositions : ", payload.futsalPositions, "working leg : ", payload.workingLeg)
-//    }
+    //    Component.onCompleted: {
+    //        console.log("Full name : ", payload.fullName, " , nic : ", payload.nic, " , email : ", payload.email)
+    //        console.log("country residence : ", payload.countryResidence, ", city residence : ", payload.cityResidence, "date of birth : ", Qt.formatDate(payload.dateOfBirth, "d/M/YYYY"))
+    //        console.log("football positions : ", payload.footballPositions, "futsalPositions : ", payload.futsalPositions, "working leg : ", payload.workingLeg)
+    //    }
 
 
     ColumnLayout {

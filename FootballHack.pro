@@ -14,6 +14,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         core/Models/LocationsModel.cpp \
+        core/Models/playerssortfiltermodel.cpp \
         main.cpp
 
 RESOURCES += qml.qrc \
@@ -33,4 +34,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES +=
 
 HEADERS += \
-    core/Models/LocationsModel.hpp
+    core/Models/LocationsModel.hpp \
+    core/Models/playerssortfiltermodel.h

@@ -28,5 +28,6 @@
         <file>Components/ProfileAvatarAndDataItem.qml</file>
         <file>Pages/CreateTeamPage.qml</file>
         <file>Pages/CreateTeamNextPage.qml</file>
+        <file>Components/InviteListViewDelegate.qml</file>
     </qresource>
 </RCC>

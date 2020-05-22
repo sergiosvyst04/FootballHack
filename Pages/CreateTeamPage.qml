@@ -9,7 +9,7 @@ import Qt.labs.platform 1.1
 BasePage {
     bgImage: "qrc:/images/assets/icons/CreateTeamBG.jpg"
     nextButtonVisible: true
-    nextButtonEnabled: teamNameField.validated && cityComboBox.currentIndex != -1
+    nextButtonEnabled: teamNameField.validated /*&& cityComboBox.currentIndex != -1*/
     nextButtonText: qsTr("Next")
     onNextButtonClicked: navigateToItem("qrc:/Pages/CreateTeamNextPage.qml", {teamName : teamNameField.text})
 
@@ -100,7 +100,7 @@ BasePage {
             ColumnLayout {
                 DescriptionText {
                     Layout.alignment: Qt.AlignLeft
-                    text: qsTr("Emblem")
+                    text: qsTr("Team photo")
                     font: Fonts.nunitoSans(11)
                 }
 
