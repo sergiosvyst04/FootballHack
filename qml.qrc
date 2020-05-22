@@ -26,5 +26,7 @@
         <file>Pages/HomePage.qml</file>
         <file>Pages/ProfilePage.qml</file>
         <file>Components/ProfileAvatarAndDataItem.qml</file>
+        <file>Pages/CreateTeamPage.qml</file>
+        <file>Pages/CreateTeamNextPage.qml</file>
     </qresource>
 </RCC>

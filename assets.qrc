@@ -9,6 +9,7 @@
         <file>assets/icons/Avatar.png</file>
         <file>assets/icons/ProfilePageBG.jpg</file>
         <file>assets/icons/settings_white.png</file>
+        <file>assets/icons/CreateTeamBG.jpg</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>
