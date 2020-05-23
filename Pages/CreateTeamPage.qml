@@ -56,6 +56,7 @@ BasePage {
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: 30
             ColumnLayout {
                 DescriptionText {
                     Layout.alignment: Qt.AlignLeft
@@ -68,6 +69,20 @@ BasePage {
                     Layout.preferredHeight: 80
                     Layout.preferredWidth: 80
                 }
+            }
+
+            ColoredButton {
+                id: removeEmblemImageBtn
+                Layout.preferredHeight: 25
+                Layout.preferredWidth: 25
+
+                back.radius: 13
+                visible: emblemImage.status !== Image.Null
+
+                font: Fonts.nunitoSansBold(10)
+                fontColor: Colors.bgColor
+                text: qsTr("X")
+                onClicked: emblemImage.source = ""
             }
 
             Item {
@@ -83,6 +98,10 @@ BasePage {
                 back.color: Colors.transparentColor
                 back.border.width: 1
                 back.border.color: Colors.white
+                enabled: emblemImage.status === Image.Null
+                opacity: enabled ? 1 : 0.5
+
+
 
                 text: qsTr("Download")
                 fontColor: Colors.white
@@ -97,9 +116,11 @@ BasePage {
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: 30
             ColumnLayout {
                 DescriptionText {
                     Layout.alignment: Qt.AlignLeft
+                    Layout.preferredWidth: teamImage.width
                     text: qsTr("Team photo")
                     font: Fonts.nunitoSans(11)
                 }
@@ -108,7 +129,21 @@ BasePage {
                     id: teamImage
                     Layout.preferredHeight: 80
                     Layout.preferredWidth: 80
+                    source: ""
                 }
+            }
+
+            ColoredButton {
+                id: removeTeamImageBtn
+                Layout.preferredHeight: 25
+                Layout.preferredWidth: 25
+                back.radius: 13
+                visible: teamImage.status !== Image.Null
+
+                font: Fonts.nunitoSansBold(10)
+                fontColor: Colors.bgColor
+                text: qsTr("X")
+                onClicked: teamImage.source = ""
             }
 
             Item {
@@ -123,6 +158,8 @@ BasePage {
                 back.color: Colors.transparentColor
                 back.border.width: 1
                 back.border.color: Colors.white
+                enabled:  teamImage.status === Image.Null
+                opacity: enabled ? 1 : 0.5
 
                 text: qsTr("Download")
                 fontColor: Colors.white
