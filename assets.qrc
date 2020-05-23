@@ -10,6 +10,7 @@
         <file>assets/icons/ProfilePageBG.jpg</file>
         <file>assets/icons/settings_white.png</file>
         <file>assets/icons/CreateTeamBG.jpg</file>
+        <file>assets/icons/LifeHacksBG.jpg</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

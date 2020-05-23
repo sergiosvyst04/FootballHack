@@ -66,7 +66,7 @@ BasePage {
             model: ListModel {
                 ListElement {text: qsTr("Profile"); destination: "qrc:/Pages/ProfilePage.qml" }
                 ListElement {text: qsTr("Create team"); destination: "qrc:/Pages/CreateTeamPage.qml" }
-                ListElement {text: qsTr("Life hacks"); destination: ""}
+                ListElement {text: qsTr("Life hacks"); destination: "qrc:/Pages/LifeHacksPage.qml"}
             }
 
             delegate: ColoredButton {
