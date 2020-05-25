@@ -14,7 +14,7 @@ ApplicationWindow {
     StackView {
         id: rootStackView
         anchors.fill: parent
-        initialItem: Qt.resolvedUrl("qrc:/Pages/HomePage.qml")
+        initialItem: Qt.resolvedUrl("qrc:/Pages/TeamPage.qml")
         Keys.onBackPressed: {
 
         }

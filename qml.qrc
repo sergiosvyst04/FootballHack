@@ -30,5 +30,6 @@
         <file>Pages/CreateTeamNextPage.qml</file>
         <file>Components/InviteListViewDelegate.qml</file>
         <file>Pages/LifeHacksPage.qml</file>
+        <file>Pages/TeamPage.qml</file>
     </qresource>
 </RCC>
