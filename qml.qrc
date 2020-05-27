@@ -36,5 +36,10 @@
         <file>Pages/OffersPage.qml</file>
         <file>Components/OfferItem.qml</file>
         <file>Pages/OfferDetailsPage.qml</file>
+        <file>Pages/PlayerReviewPage.qml</file>
+        <file>Components/PlayerInfoItem.qml</file>
+        <file>Components/ReviewTabButton.qml</file>
+        <file>Components/BiographyItem.qml</file>
+        <file>Components/RespondItem.qml</file>
     </qresource>
 </RCC>

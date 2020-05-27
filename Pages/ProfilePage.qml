@@ -99,9 +99,9 @@ BasePage {
             Repeater {
                 model: ListModel {
                     ListElement {text: qsTr("My teams"); destination: "qrc:/Pages/TeamPage.qml" }
-                    ListElement {text: qsTr("Gallery") }
-                    ListElement {text: qsTr("Biorgaphy") }
-                    ListElement {text: qsTr("Responds") }
+                    ListElement {text: qsTr("Biorgaphy"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
+                    ListElement {text: qsTr("Gallery"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
+                    ListElement {text: qsTr("Responds"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
                 }
 
                 delegate: ColoredButton {
@@ -112,35 +112,42 @@ BasePage {
                     font: Fonts.nunitoSans(15)
                     fontColor: Colors.white
                     text: model.text
-                    onClicked: navigateToItem(model.destination)
+                    onClicked: {
+                        if(index === 0)
+                            navigateToItem(model.destination)
+                        else
+                            navigateToItem(model.destination, {tabBarIndex: index - 1})
+                    }
                 }
             }
 
-            ColoredButton {
-                Layout.preferredHeight: 130
-                Layout.preferredWidth: 130
-                visible: marketSwitch.checked
+                ColoredButton {
+                    Layout.preferredHeight: 130
+                    Layout.preferredWidth: 130
+                    visible: marketSwitch.checked
 
-                color: Colors.secondaryColorWithOpacity
-                font: Fonts.nunitoSans(15)
-                fontColor: Colors.white
-                text: qsTr("Invites")
+                    color: Colors.secondaryColorWithOpacity
+                    font: Fonts.nunitoSans(15)
+                    fontColor: Colors.white
+                    text: qsTr("Invites")
+                }
+
+                ColoredButton {
+                    Layout.preferredHeight: 130
+                    Layout.preferredWidth: 130
+                    visible: marketSwitch.checked
+
+                    color: Colors.secondaryColorWithOpacity
+                    font: Fonts.nunitoSans(15)
+                    fontColor: Colors.white
+                    text: qsTr("Prepositions")
+                    onClicked: navigateToItem("qrc:/Pages/OffersPage.qml")
+                }
             }
 
-            ColoredButton {
-                Layout.preferredHeight: 130
-                Layout.preferredWidth: 130
-                visible: marketSwitch.checked
-
-                color: Colors.secondaryColorWithOpacity
-                font: Fonts.nunitoSans(15)
-                fontColor: Colors.white
-                text: qsTr("Prepositions")
+            Item {
+                Layout.fillHeight: true
             }
-        }
-
-        Item {
-            Layout.fillHeight: true
         }
     }
-}
+
