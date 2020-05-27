@@ -37,7 +37,7 @@ BasePage {
             Repeater {
                 model: ListModel {
                     ListElement {name: "Players"}
-                    ListElement {name: "Gallery"}
+                    ListElement {name: "Gallery"; destination: "qrc:/Pages/TeamCalendarPage.qml"}
                     ListElement {name: "Calendar"}
                     ListElement {name: "Results"}
                     ListElement {name: "Statistics"}
@@ -51,6 +51,7 @@ BasePage {
                     font: Fonts.nunitoSans(14)
                     fontColor: Colors.white
                     text: model.name
+                    onClicked: navigateToItem(model.destination)
                 }
             }
 

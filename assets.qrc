@@ -13,6 +13,11 @@
         <file>assets/icons/LifeHacksBG.jpg</file>
         <file>assets/icons/PerfectialCup.jpg</file>
         <file>assets/icons/PerfectialLogo.png</file>
+        <file>assets/icons/CalenddarBG.jpg</file>
+        <file>assets/icons/OffersPageBG.jpg</file>
+        <file>assets/icons/LiverpoolLogo.png</file>
+        <file>assets/icons/CoreLogo.png</file>
+        <file>assets/icons/BarcelonaLogo.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

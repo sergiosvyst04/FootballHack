@@ -31,5 +31,10 @@
         <file>Components/InviteListViewDelegate.qml</file>
         <file>Pages/LifeHacksPage.qml</file>
         <file>Pages/TeamPage.qml</file>
+        <file>Pages/TeamCalendarPage.qml</file>
+        <file>Components/EventsCalendar.qml</file>
+        <file>Pages/OffersPage.qml</file>
+        <file>Components/OfferItem.qml</file>
+        <file>Pages/OfferDetailsPage.qml</file>
     </qresource>
 </RCC>

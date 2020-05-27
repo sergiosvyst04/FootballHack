@@ -98,7 +98,7 @@ BasePage {
 
             Repeater {
                 model: ListModel {
-                    ListElement {text: qsTr("My teams") }
+                    ListElement {text: qsTr("My teams"); destination: "qrc:/Pages/TeamPage.qml" }
                     ListElement {text: qsTr("Gallery") }
                     ListElement {text: qsTr("Biorgaphy") }
                     ListElement {text: qsTr("Responds") }
@@ -112,6 +112,7 @@ BasePage {
                     font: Fonts.nunitoSans(15)
                     fontColor: Colors.white
                     text: model.text
+                    onClicked: navigateToItem(model.destination)
                 }
             }
 
