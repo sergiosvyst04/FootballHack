@@ -41,5 +41,9 @@
         <file>Components/ReviewTabButton.qml</file>
         <file>Components/BiographyItem.qml</file>
         <file>Components/RespondItem.qml</file>
+        <file>Pages/TransferMarketPage.qml</file>
+        <file>Components/TransferMarketItem.qml</file>
+        <file>Pages/FiltersPage.qml</file>
+        <file>Components/PositionsPopup.qml</file>
     </qresource>
 </RCC>

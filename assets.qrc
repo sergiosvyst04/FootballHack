@@ -21,6 +21,7 @@
         <file>assets/icons/Guardiola.jpeg</file>
         <file>assets/icons/kloppp.jpeg</file>
         <file>assets/icons/Tsybyk.jpg</file>
+        <file>assets/icons/TransferMarketPage.jpg</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

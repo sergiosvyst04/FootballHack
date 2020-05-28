@@ -1,42 +1,48 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
-import "../Singletons"
 import "../Components"
+import "../Singletons"
+import LocationsModel 1.0
 
 BasePage {
-    bgImage: "qrc:/images/assets/icons/bright1.jpg"
+    bgImage: "qrc:/images/assets/icons/TransferMarketPage.jpg"
     nextButtonVisible: true
-    nextButtonText: qsTr("Next")
-    onNextButtonClicked: navigateToItem("qrc:/Pages/BiographyPage.qml",
-                                        {payload: {fullName : payload.fullName, nic: payload.nic, email: payload.email, password : payload.password,
-                                                countryResidence: payload.countryResidence, cityResidence: payload.cityResidence, dateOfBirth: payload.dateOfBirth,
-                                                footballPositions: footballPositionsButton.text, futsalPositions: fusalPositionsButton.text, workingLeg: workingLegComboBox.textAt(workingLegComboBox.currentIndex)}})
+    nextButtonText: qsTr("Apply")
 
+    LocationsModel {
+        id: citiesModel
+    }
 
     ColumnLayout {
         anchors {
             fill: parent
             leftMargin: 20
             rightMargin: 20
-            topMargin: 30
         }
         spacing: 35
 
+
         DescriptionText {
             Layout.alignment: Qt.AlignHCenter
+            text: qsTr("Filters")
             font: Fonts.nunitoSans(30)
-            text: qsTr("Create Account")
         }
 
         DescriptionText {
             Layout.alignment: Qt.AlignLeft
             font: Fonts.nunitoSansBold(14)
-            text: qsTr("What do you play?")
+            text: qsTr("Kind of sport")
         }
 
-        ColumnLayout {
-            id: kindOfSportsColumn
+        ButtonGroup {
+            id: btnGroup
+            buttons: kindOfSportsRow.children
+            exclusive: true
+        }
+
+        RowLayout {
+            id: kindOfSportsRow
             spacing: 20
 
             KindOfSportCheckBox {
@@ -55,12 +61,30 @@ BasePage {
         }
 
         ColumnLayout {
-            id: footballPosition
-            visible: footballCheckBox.checked
+            DescriptionText {
+                Layout.alignment: Qt.AlignLeft
+                text: qsTr("City residence")
+                font: Fonts.nunitoSans(11)
+            }
+
+            LocationCombobox {
+                id: cityComboBox
+                Layout.fillWidth: true
+                Layout.preferredHeight: 50
+                currentIndex: -1
+                model: citiesModel
+                enabled: true
+                Component.onCompleted: citiesModel.getCities("Ukraine")
+            }
+        }
+
+        ColumnLayout {
+            id: position
+            visible: footballCheckBox.checked || futsalCheckBox.checked
 
             DescriptionText {
                 Layout.alignment: Qt.AlignLeft
-                text: qsTr("Football position")
+                text: footballCheckBox.checked ? qsTr("Football positions") : qsTr("Futsal positions")
                 font: Fonts.nunitoSans(11)
             }
 
@@ -80,7 +104,7 @@ BasePage {
 
                 onClicked:  {
                     positionsPopup.active = true
-                    positionsPopup.isFootballPositions = true
+                    positionsPopup.isFootballPositions = footballCheckBox.checked
                 }
 
 
@@ -88,40 +112,21 @@ BasePage {
         }
 
         ColumnLayout {
-            id: futsalPosition
-            visible: futsalCheckBox.checked
-
+            spacing: 20
             DescriptionText {
                 Layout.alignment: Qt.AlignLeft
-                text: qsTr("Futsal position")
+                text: qsTr("Age")
                 font: Fonts.nunitoSans(11)
             }
 
-            ColoredButton {
-                id: fusalPositionsButton
+            DatesSlider {
                 Layout.fillWidth: true
-                Layout.preferredHeight: 50
-                color: Colors.secondaryColor
-
-                contentItem: Text {
-                    leftPadding: 15
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignLeft
-                    font: Fonts.nunitoSans(12)
-                    text: parent.text
-                    color: Colors.white
-                }
-
-                onClicked: {
-                    positionsPopup.active = true
-                    positionsPopup.isFootballPositions = false
-                }
+                from: 7
+                to: 70
             }
-
         }
 
         ColumnLayout {
-
             DescriptionText {
                 Layout.alignment: Qt.AlignLeft
                 text: qsTr("Working leg")
@@ -142,8 +147,6 @@ BasePage {
         Item {
             Layout.fillHeight: true
         }
-
-
     }
 
     Loader {
@@ -153,13 +156,13 @@ BasePage {
         property var checkedPositions: []
 
         sourceComponent: PositionsPopup {
-            title: qsTr("Your preferred positions")
+            title: qsTr("Position")
             onOkClicked: {
                 positionsPopup.active = false
                 if(positionsPopup.isFootballPositions)
                     footballPositionsButton.text = positionsPopup.checkedPositions.join(" ")
                 else
-                    fusalPositionsButton.text = positionsPopup.checkedPositions.join(" ")
+                    footballPositionsButton.text = positionsPopup.checkedPositions.join(" ")
                 positionsPopup.checkedPositions = []
             }
         }
