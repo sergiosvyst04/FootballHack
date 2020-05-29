@@ -12,4 +12,5 @@ QtObject {
     readonly property color transparentColor: "transparent"
     readonly property color grey: "#C4C4C4"
     readonly property color activeSwitchColor: "#189E1E"
+    readonly property color winColor: "#00FF0A"
 }

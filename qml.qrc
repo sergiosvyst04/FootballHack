@@ -45,5 +45,7 @@
         <file>Components/TransferMarketItem.qml</file>
         <file>Pages/FiltersPage.qml</file>
         <file>Components/PositionsPopup.qml</file>
+        <file>Pages/TeamReviewPage.qml</file>
+        <file>Components/TeamPlayerItem.qml</file>
     </qresource>
 </RCC>

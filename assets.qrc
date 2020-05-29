@@ -22,6 +22,11 @@
         <file>assets/icons/kloppp.jpeg</file>
         <file>assets/icons/Tsybyk.jpg</file>
         <file>assets/icons/TransferMarketPage.jpg</file>
+        <file>assets/icons/TeamReviewBG.jpg</file>
+        <file>assets/icons/PerfectialSuqad.jpg</file>
+        <file>assets/icons/Diachuk.png</file>
+        <file>assets/icons/Pashkevych.png</file>
+        <file>assets/icons/Snylyk.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>
