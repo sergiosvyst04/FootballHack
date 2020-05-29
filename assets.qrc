@@ -28,6 +28,7 @@
         <file>assets/icons/Pashkevych.png</file>
         <file>assets/icons/Snylyk.png</file>
         <file>assets/icons/WriteRespondBG.jpg</file>
+        <file>assets/icons/MakeTransferReqvestBG.jpeg</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

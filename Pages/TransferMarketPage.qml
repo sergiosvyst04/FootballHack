@@ -96,7 +96,7 @@ BasePage {
             fontColor: Colors.bgColor
             font: Fonts.nunitoSans(11)
             text: qsTr("Filters")
-            onClicked: navigateToItem("qrc:/Pages/FiltersPage.qml")
+            onClicked: navigateToItem("qrc:/Pages/FiltersPage.qml", {isFilters: true})
         }
 
         Rectangle {
