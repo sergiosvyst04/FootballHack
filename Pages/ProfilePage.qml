@@ -47,6 +47,8 @@ BasePage {
         ProfileAvatarAndDataItem {
             Layout.fillWidth: true
             Layout.topMargin: -30
+
+            isProfile: true
             userName: qsTr("Serhii Svyst")
             respectsAmount: "88"
             errorBalance: "108/85"

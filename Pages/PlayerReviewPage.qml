@@ -19,17 +19,18 @@ BasePage {
         }
         spacing: 20
 
-        PlayerInfoItem {
+        ProfileAvatarAndDataItem {
             Layout.leftMargin: 25
             Layout.fillWidth: true
             Layout.preferredHeight: 170
 
-            name: qsTr("Serhii Svyst")
+            userName: qsTr("Serhii Svyst")
             team: qsTr("FC Perfectial")
             position: qsTr("DEF")
-            residence: qsTr("Lviv, Ukraine")
+            resindence: qsTr("Lviv, Ukraine")
             dateOfBirth: qsTr("23 (15.05.1997)")
             ava: "qrc:/images/assets/icons/Avatar.png"
+
         }
 
         TabBar {

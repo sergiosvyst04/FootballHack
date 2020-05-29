@@ -6,10 +6,17 @@ import "../Singletons"
 import "../Components"
 
 RowLayout {
+    property bool isProfile
     property alias ava: avatar.source
     property alias respectsAmount: respects.text
     property alias errorBalance: errorBalance.text
-    property alias userName: name.text
+    property alias userName: playerName.text
+    property alias resindence: residenceText.text
+    property alias dateOfBirth: playerAge.text
+    property string team
+    property string position
+
+
 
 
     spacing: 25
@@ -39,12 +46,36 @@ RowLayout {
         spacing: 15
 
         DescriptionText {
-            id: name
-            Layout.alignment: Qt.AlignHCenter
+            id: playerName
             font: Fonts.nunitoSansBold(16)
+            text: name
         }
 
+        ColumnLayout {
+            id: reviewDataColumn
+            visible: !isProfile
+            DescriptionText {
+                id: residenceText
+                Layout.topMargin: 3
+                font: Fonts.nunitoSansBold(11)
+            }
+
+            DescriptionText {
+                id: playerTeamAndPosition
+                font: Fonts.nunitoSans(11)
+                text: "%1(%2)".arg(team).arg(position)
+            }
+
+            DescriptionText {
+                id: playerAge
+                font: Fonts.nunitoSans(11)
+            }
+        }
+
+
         RowLayout {
+            id: errorsRespectsRow
+            visible: isProfile
             ColumnLayout {
                 DescriptionText {
                     id: errorBalance
@@ -74,5 +105,7 @@ RowLayout {
                 }
             }
         }
+
+
     }
 }
