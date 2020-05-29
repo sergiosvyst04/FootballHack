@@ -47,5 +47,7 @@
         <file>Components/PositionsPopup.qml</file>
         <file>Pages/TeamReviewPage.qml</file>
         <file>Components/TeamPlayerItem.qml</file>
+        <file>Pages/WriteRespondPage.qml</file>
+        <file>Components/ScrollingTextArea.qml</file>
     </qresource>
 </RCC>

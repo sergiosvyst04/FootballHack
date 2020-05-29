@@ -27,6 +27,7 @@
         <file>assets/icons/Diachuk.png</file>
         <file>assets/icons/Pashkevych.png</file>
         <file>assets/icons/Snylyk.png</file>
+        <file>assets/icons/WriteRespondBG.jpg</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>
