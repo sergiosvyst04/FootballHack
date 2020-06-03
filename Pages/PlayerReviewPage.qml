@@ -7,6 +7,7 @@ import "../Singletons"
 BasePage {
     bgImage: "qrc:/images/assets/icons/ProfilePageBG.jpg"
     property var tabBarIndex
+    property bool forTransfer: false
 
 
     ColumnLayout {
@@ -15,11 +16,13 @@ BasePage {
             fill: parent
             leftMargin: 18
             rightMargin: 18
-            bottomMargin: 20
+            bottomMargin: forTransfer ? 70 : 20
         }
+
         spacing: 20
 
         ProfileAvatarAndDataItem {
+            id: profileData
             Layout.leftMargin: 25
             Layout.fillWidth: true
             Layout.preferredHeight: 170
@@ -30,7 +33,6 @@ BasePage {
             resindence: qsTr("Lviv, Ukraine")
             dateOfBirth: qsTr("23 (15.05.1997)")
             ava: "qrc:/images/assets/icons/Avatar.png"
-
         }
 
         TabBar {
@@ -70,56 +72,92 @@ BasePage {
 
             delegate: reviewTabBar.currentIndex === 0 ? bioDelegate : reviewTabBar.currentIndex === 1 ? gallerydelegate : respondDelegate
 
-                Component {
-                    id: bioDelegate
+            Component {
+                id: bioDelegate
 
-                    BiographyItem {
-                        width: column.width
-                        fontSize: 11
-                        team: model.team
-                        years: model.years
-                    }
+                BiographyItem {
+                    width: column.width
+                    fontSize: 11
+                    team: model.team
+                    years: model.years
                 }
+            }
 
-                Component {
-                    id: gallerydelegate
+            Component {
+                id: gallerydelegate
 
-                    Rectangle {
-                        width: column.width
-                        height: 100
-                        color: "red"
-                        opacity: 0.5
-                    }
+                Rectangle {
+                    width: column.width
+                    height: 100
+                    color: "red"
+                    opacity: 0.5
                 }
+            }
 
-                Component {
-                    id: respondDelegate
+            Component {
+                id: respondDelegate
 
-                    RespondItem {
-                        width: column.width
+                RespondItem {
+                    width: column.width
 
-                        ava: model.writerAva
-                        name: model.writer
-                        respond: model.comment
-                        advantages: model.advantages
-                        disadvantages: model.disadvantages
-                    }
+                    ava: model.writerAva
+                    name: model.writer
+                    respond: model.comment
+                    advantages: model.advantages
+                    disadvantages: model.disadvantages
                 }
+            }
         }
-        /*Rectangle {
-                width: parent.width
-                height: 110
-                color: reviewTabBar.currentIndex === 0 ? "blue" : reviewTabBar.currentIndex === 1 ? "red" : "yellow"
-                opacity: 0.5
+    }
 
-                DescriptionText {
-                    anchors.centerIn: parent
-                    text: modelData + 1
+    SendTransferRequestButton {
+        id: sendTransferRequestButton
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: 15
+            horizontalCenter: parent.horizontalCenter
+        }
 
-                }
-            }*/
+        visible: forTransfer
 
+        color: checked ? Colors.warningTextColor : Colors.approveTextColor
+        opacity: checked ? 0.6 : 1
 
+        text: checked ? qsTr("Cancel request") : qsTr("Send request")
+        font: Fonts.nunitoSans(9)
+
+        width: 70
+        height: 70
+
+    }
+
+    ColoredButton {
+        id: writeRespondButton
+        anchors {
+            top: parent.top
+            topMargin: -20
+            right: parent.right
+            rightMargin: 10
+        }
+        width: 40
+        height: 40
+        color: Colors.transparentColor
+        ColumnLayout {
+            anchors.fill: parent
+
+            Image {
+                Layout.alignment: Qt.AlignHCenter
+                sourceSize: Qt.size(writeRespondButton.width - 20, writeRespondButton.height - 20)
+                source: "qrc:/images/assets/icons/write_respond_white.png"
+            }
+
+            DescriptionText {
+                Layout.fillWidth: true
+                font: Fonts.nunitoSans(8)
+                text: qsTr("Write<br> respond")
+            }
+
+        }
     }
 
     ListModel {

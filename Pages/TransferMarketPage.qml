@@ -126,6 +126,8 @@ BasePage {
                     anchors.centerIn: parent
                     width: parent.width - 10
                     height: parent.height - 20
+
+                    onClicked: navigateToItem("qrc:/Pages/PlayerReviewPage.qml", {forTransfer: true})
                 }
             }
         }
