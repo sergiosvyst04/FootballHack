@@ -49,5 +49,6 @@
         <file>Pages/WriteRespondPage.qml</file>
         <file>Components/ScrollingTextArea.qml</file>
         <file>Components/SendTransferRequestButton.qml</file>
+        <file>Pages/MyTeamsPage.qml</file>
     </qresource>
 </RCC>

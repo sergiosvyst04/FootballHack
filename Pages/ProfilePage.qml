@@ -100,7 +100,7 @@ BasePage {
 
             Repeater {
                 model: ListModel {
-                    ListElement {text: qsTr("My teams"); destination: "qrc:/Pages/TeamPage.qml" }
+                    ListElement {text: qsTr("My teams"); destination: "qrc:/Pages/MyTeamsPage.qml" }
                     ListElement {text: qsTr("Biorgaphy"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
                     ListElement {text: qsTr("Gallery"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
                     ListElement {text: qsTr("Responds"); destination: "qrc:/Pages/PlayerReviewPage.qml" }
