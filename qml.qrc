@@ -50,5 +50,6 @@
         <file>Components/ScrollingTextArea.qml</file>
         <file>Components/SendTransferRequestButton.qml</file>
         <file>Pages/MyTeamsPage.qml</file>
+        <file>Pages/CoachRoomPage.qml</file>
     </qresource>
 </RCC>
