@@ -37,7 +37,6 @@ ComboBox {
             color: Colors.white
         }
         onClicked: activated(index)
-
     }
 
     contentItem: DescriptionText {

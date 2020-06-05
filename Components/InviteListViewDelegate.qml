@@ -8,6 +8,7 @@ import QtGraphicalEffects 1.13
 
 ColoredButton {
     id: root
+    property bool forInvite: true
     property alias name: playerName.text
     property alias playerPhoto: playerAva.source
 
@@ -58,6 +59,7 @@ ColoredButton {
 
             checkable: true
 
+            visible: forInvite
             color: Colors.approveTextColor
             back.radius: 4
             back.opacity: checked ? 0.4 : 0.8

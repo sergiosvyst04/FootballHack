@@ -5,6 +5,7 @@ import "../Components"
 import "../Singletons"
 
 ColumnLayout {
+    id: root
     property alias label: label.text
     property alias placeHolder: textArea.placeholderText
     property alias areaText: textArea.text

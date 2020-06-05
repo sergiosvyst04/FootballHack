@@ -19,33 +19,6 @@ BasePage {
         sourceModel: playersModel
     }
 
-
-    ListModel {
-        id: playersModel
-
-        ListElement {photo: "qrc:/images/assets/icons/Avatar.png"; name: qsTr("Serhii Svyst") }
-        ListElement {name: qsTr("Andrii Diachuk"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Pavlo Snylyk"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Orest Pashkevych"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Pavlo Kozlaniuk"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Sergio Ramos"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Sergio Aguero"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Sergi Roberto"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Pavlo Maldini"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Taras Grytchuk"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Taras Shevchenko"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Andrii Shevchenko"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Sedio Mane"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Mohamad"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Jurii Tsybyk"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Jurii Klop"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Andriano"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Andrii macsca"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Taras Stepanenko"); photo: "qrc:/images/assets/icons/Avatar.png"}
-        ListElement {name: qsTr("Taras Taras"); photo: "qrc:/images/assets/icons/Avatar.png"}
-    }
-
-
     ColumnLayout {
         anchors {
             fill: parent
@@ -98,9 +71,6 @@ BasePage {
                 playerPhoto: model.photo
             }
         }
-
-
-
     }
 
 

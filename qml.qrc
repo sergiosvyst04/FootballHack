@@ -51,5 +51,6 @@
         <file>Components/SendTransferRequestButton.qml</file>
         <file>Pages/MyTeamsPage.qml</file>
         <file>Pages/CoachRoomPage.qml</file>
+        <file>Pages/SendTaskPage.qml</file>
     </qresource>
 </RCC>

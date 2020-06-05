@@ -32,7 +32,7 @@ BasePage {
 
             model: ListModel {
                 ListElement {text: qsTr("Make game review"); destination: ""}
-                ListElement {text: qsTr("Tasks"); destination: ""}
+                ListElement {text: qsTr("Tasks"); destination: "qrc:/Pages/SendTaskPage.qml"}
                 ListElement {text: qsTr("Endorsements"); destination: ""}
                 ListElement {text: qsTr("Add combination"); destination: ""}
                 ListElement {text: qsTr("Go on transfermarket"); destination: "qrc:/Pages/TransferMarketPage.qml"}
