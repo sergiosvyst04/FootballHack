@@ -52,5 +52,6 @@
         <file>Pages/MyTeamsPage.qml</file>
         <file>Pages/CoachRoomPage.qml</file>
         <file>Pages/SendTaskPage.qml</file>
+        <file>Pages/SendEndorsementPage.qml</file>
     </qresource>
 </RCC>

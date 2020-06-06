@@ -6,7 +6,6 @@ import "../Singletons"
 
 TabButton {
     id: root
-    height: 30
 
     contentItem: Text {
         color: Colors.white
