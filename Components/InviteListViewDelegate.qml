@@ -17,7 +17,7 @@ ColoredButton {
     RowLayout {
         anchors {
             fill : parent
-            leftMargin: 20
+            leftMargin: 10
             rightMargin: 20
             topMargin: 5
             bottomMargin: 5

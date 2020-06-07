@@ -31,6 +31,14 @@
         <file>assets/icons/MakeTransferReqvestBG.jpeg</file>
         <file>assets/icons/write_respond_white.png</file>
         <file>assets/icons/CoachRoomBG.jpg</file>
+        <file>assets/icons/videoplayback.mp4</file>
+        <file>assets/icons/volume_icon.png</file>
+        <file>assets/icons/rewind_icon.png</file>
+        <file>assets/icons/play_icon.png</file>
+        <file>assets/icons/pause-icon.png</file>
+        <file>assets/icons/fullscreen_white.png</file>
+        <file>assets/icons/mute_white.png</file>
+        <file>assets/icons/screenShoot.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

@@ -53,5 +53,7 @@
         <file>Pages/CoachRoomPage.qml</file>
         <file>Pages/SendTaskPage.qml</file>
         <file>Pages/SendEndorsementPage.qml</file>
+        <file>Pages/MatchReviewPage.qml</file>
+        <file>Components/VideoPlayerBar.qml</file>
     </qresource>
 </RCC>

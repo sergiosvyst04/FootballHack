@@ -31,7 +31,7 @@ BasePage {
             spacing: 20
 
             model: ListModel {
-                ListElement {text: qsTr("Make game review"); destination: ""}
+                ListElement {text: qsTr("Make game review"); destination: "qrc:/Pages/MatchReviewPage.qml"}
                 ListElement {text: qsTr("Tasks"); destination: "qrc:/Pages/SendTaskPage.qml"}
                 ListElement {text: qsTr("Endorsements"); destination: "qrc:/Pages/SendEndorsementPage.qml"}
                 ListElement {text: qsTr("Add combination"); destination: ""}

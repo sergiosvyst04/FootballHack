@@ -9,6 +9,7 @@ ColumnLayout {
     property alias label: label.text
     property alias placeHolder: textArea.placeholderText
     property alias areaText: textArea.text
+    property alias bgColor: back.color
     property int textAreaHeight
 
 
@@ -32,6 +33,7 @@ ColumnLayout {
             wrapMode: TextEdit.WrapAtWordBoundaryOrAnywhere
 
             background: Rectangle {
+                id: back
                 anchors.fill: parent
                 color: Colors.secondaryColorWithOpacity
             }
