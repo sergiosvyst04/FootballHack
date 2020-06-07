@@ -55,5 +55,8 @@
         <file>Pages/SendEndorsementPage.qml</file>
         <file>Pages/MatchReviewPage.qml</file>
         <file>Components/VideoPlayerBar.qml</file>
+        <file>Pages/ErrorsTasksPage.qml</file>
+        <file>Components/ErrorItem.qml</file>
+        <file>Components/TaskDelegate.qml</file>
     </qresource>
 </RCC>
