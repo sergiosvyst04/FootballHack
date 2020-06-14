@@ -58,5 +58,7 @@
         <file>Pages/ErrorsTasksPage.qml</file>
         <file>Components/ErrorItem.qml</file>
         <file>Components/TaskDelegate.qml</file>
+        <file>Pages/PlayerRequestsPage.qml</file>
+        <file>Components/IncomingRequestDelegate.qml</file>
     </qresource>
 </RCC>

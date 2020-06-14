@@ -37,10 +37,10 @@ BasePage {
             Repeater {
                 model: ListModel {
                     ListElement {name: "Players"}
-                    ListElement {name: "Gallery"; destination: "qrc:/Pages/TeamCalendarPage.qml"}
-                    ListElement {name: "Calendar"}
+                    ListElement {name: "Gallery"}
+                    ListElement {name: "Calendar"; destination: "qrc:/Pages/TeamCalendarPage.qml" }
                     ListElement {name: "Results"}
-                    ListElement {name: "Statistics"}
+                    ListElement {name: "Statistics"; destination: "qrc:/Pages/CoachRoomPage.qml"}
                 }
 
                 delegate: ColoredButton {

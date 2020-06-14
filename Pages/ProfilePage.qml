@@ -9,6 +9,7 @@ BasePage {
     nextButtonVisible: false
     backButtonVisible: false
 
+
     ColumnLayout {
         anchors {
             fill: parent
@@ -50,8 +51,8 @@ BasePage {
 
             isProfile: true
             userName: qsTr("Serhii Svyst")
-            respectsAmount: "88"
-            errorBalance: "108/85"
+//            respectsAmount: "88"
+//            errorBalance: "108/85"
             ava: "qrc:/images/assets/icons/Avatar.png"
         }
 
@@ -132,6 +133,7 @@ BasePage {
                     font: Fonts.nunitoSans(15)
                     fontColor: Colors.white
                     text: qsTr("Invites")
+                    onClicked: navigateToItem("qrc:/Pages/PlayerRequestsPage.qml")
                 }
 
                 ColoredButton {

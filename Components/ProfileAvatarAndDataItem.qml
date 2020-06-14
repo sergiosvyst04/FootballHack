@@ -8,8 +8,8 @@ import "../Components"
 RowLayout {
     property bool isProfile
     property alias ava: avatar.source
-    property alias respectsAmount: respects.text
-    property alias errorBalance: errorBalance.text
+//    property alias respectsAmount: respects.text
+//    property alias errorBalance: errorBalance.text
     property alias userName: playerName.text
     property alias resindence: residenceText.text
     property alias dateOfBirth: playerAge.text
@@ -76,33 +76,67 @@ RowLayout {
         RowLayout {
             id: errorsRespectsRow
             visible: isProfile
-            ColumnLayout {
-                DescriptionText {
-                    id: errorBalance
-                    Layout.alignment: Qt.AlignHCenter
-                    font: Fonts.nunitoSansBold(11)
-                }
 
-                DescriptionText {
-                    Layout.alignment: Qt.AlignHCenter
-                    font: Fonts.nunitoSans(10)
-                    text: qsTr("Error balance")
-                }
+            ColoredButton {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 70
+                color: Colors.transparentColor
+                fontColor: Colors.white
+                font: Fonts.nunitoSans(11)
+
+                text: "44\n Error balance"
+
+                onClicked: navigateToItem("qrc:/Pages/ErrorsTasksPage.qml")
+
+//                ColumnLayout {
+//                    anchors {
+//                        fill: parent
+//                        margins: 10
+//                    }
+
+//                    DescriptionText {
+//                        id: errorBalance
+//                        Layout.alignment: Qt.AlignHCenter
+//                        font: Fonts.nunitoSansBold(11)
+//                    }
+
+//                    DescriptionText {
+//                        Layout.alignment: Qt.AlignHCenter
+//                        font: Fonts.nunitoSans(10)
+//                        text: qsTr("Error balance")
+//                    }
+//                }
             }
 
+            ColoredButton {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 70
+                color: Colors.transparentColor
+                fontColor: Colors.white
+                font: Fonts.nunitoSans(11)
 
-            ColumnLayout {
-                DescriptionText {
-                    id: respects
-                    Layout.alignment: Qt.AlignHCenter
-                    font: Fonts.nunitoSansBold(11)
-                }
+                text: "88\n Tasks"
 
-                DescriptionText {
-                    Layout.alignment: Qt.AlignHCenter
-                    font: Fonts.nunitoSans(10)
-                    text: qsTr("Respects")
-                }
+                onClicked: navigateToItem("qrc:/Pages/ErrorsTasksPage.qml")
+
+//                ColumnLayout {
+//                    anchors {
+//                        fill: parent
+//                        margins: 10
+//                    }
+
+//                    DescriptionText {
+//                        id: respects
+//                        Layout.alignment: Qt.AlignHCenter
+//                        font: Fonts.nunitoSansBold(11)
+//                    }
+
+//                    DescriptionText {
+//                        Layout.alignment: Qt.AlignHCenter
+//                        font: Fonts.nunitoSans(10)
+//                        text: qsTr("Tasks")
+//                    }
+//                }
             }
         }
 

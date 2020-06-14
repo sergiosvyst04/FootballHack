@@ -18,8 +18,9 @@ Button {
         opacity: 0.54
     }
 
-    contentItem:  Text {
+    contentItem: Text {
         id: textItem
+        textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         text: root.text
