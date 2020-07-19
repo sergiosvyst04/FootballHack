@@ -8,6 +8,24 @@ BasePage {
     bgImage: "qrc:/images/assets/icons/PerfectialCup.jpg"
     nextButtonVisible: false
 
+    ColoredButton {
+        anchors {
+            right: parent.right
+            rightMargin: 10
+            top: parent.top
+        }
+        height: 30
+        width: 30
+        color: Colors.transparentColor
+
+        Image {
+            anchors.fill: parent
+            source: "qrc:/images/assets/icons/settings_white.png"
+        }
+
+        onClicked: navigateToItem("qrc:/Pages/TeamSettingsPage.qml")
+    }
+
     ColumnLayout {
         anchors {
             fill: parent

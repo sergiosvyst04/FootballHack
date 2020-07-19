@@ -60,5 +60,6 @@
         <file>Components/TaskDelegate.qml</file>
         <file>Pages/PlayerRequestsPage.qml</file>
         <file>Components/IncomingRequestDelegate.qml</file>
+        <file>Pages/TeamSettingsPage.qml</file>
     </qresource>
 </RCC>

@@ -114,8 +114,7 @@ BasePage {
 
             model: playersModel
 
-            delegate: TeamPlayerItem {
-
+           delegate: TeamPlayerItem {
                 errorsRespectsVisible: !isForReview
                 width: parent.width
                 height: 80
