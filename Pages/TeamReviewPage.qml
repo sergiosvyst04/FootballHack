@@ -6,6 +6,7 @@ import "../Components"
 
 BasePage {
     bgImage: "qrc:/images/assets/icons/TeamReviewBG.jpg"
+    property bool isForReview: false
 
 
     ColumnLayout {
@@ -19,22 +20,25 @@ BasePage {
 
         DescriptionText {
             Layout.alignment: Qt.AlignHCenter
-            font: Fonts.nunitoSansBold(20)
+            font: isForReview ? Fonts.nunitoSansBold(20) : Fonts.nunitoSans(18)
             text: qsTr("FC Perfectial")
         }
 
         Image {
-            Layout.fillWidth: true
-            Layout.preferredHeight: 140
-            source: "qrc:/images/assets/icons/PerfectialSuqad.jpg"
+            Layout.alignment: Qt.AlignHCenter
+            Layout.preferredWidth: isForReview ? parent.width : 95
+            Layout.preferredHeight: isForReview ? 140 : 95
+            source: isForReview ? "qrc:/images/assets/icons/PerfectialSuqad.jpg" : "qrc:/images/assets/icons/PerfectialLogo.png"
         }
 
         ColumnLayout {
             Layout.fillWidth: true
+            visible: isForReview
             DescriptionText {
                 text: qsTr("Statistics")
                 font: Fonts.nunitoSans(10)
             }
+
             RowLayout {
                 Layout.fillWidth: true
                 spacing: 15
@@ -90,6 +94,7 @@ BasePage {
         TeamPlayerItem {
             Layout.fillWidth: true
             Layout.preferredHeight: 80
+            errorsRespectsVisible: false
             playerName: qsTr("Yurii Tsybyk")
             age: 40
             avatar: "qrc:/images/assets/icons/Tsybyk.jpg"
@@ -110,6 +115,8 @@ BasePage {
             model: playersModel
 
             delegate: TeamPlayerItem {
+
+                errorsRespectsVisible: !isForReview
                 width: parent.width
                 height: 80
                 playerName: model.name

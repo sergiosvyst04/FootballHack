@@ -15,7 +15,7 @@ ColoredButton {
     signal acceptClicked()
     signal rejectClicked()
     signal cancelClicked()
-    onClicked: navigateToItem("qrc:/Pages/TeamReviewPage.qml")
+    onClicked: navigateToItem("qrc:/Pages/TeamReviewPage.qml", {isForReview: true})
 
     color: state  === 1 ? Colors.winColor : model.state === 2 ? Colors.warningTextColor : Colors.secondaryColor
 

@@ -8,6 +8,7 @@ ColoredButton {
     property string playerName
     property int age
     property alias avatar: avatar.source
+    property alias errorsRespectsVisible: errorsRespectsColumn.visible
 
     color: Colors.secondaryColor
 
@@ -32,6 +33,36 @@ ColoredButton {
             DescriptionText {
                 font: Fonts.nunitoSans(11)
                 text: qsTr("Age : %1").arg(age)
+            }
+        }
+
+        ColumnLayout {
+            id: errorsRespectsColumn
+
+            RowLayout {
+                Image {
+                    sourceSize: Qt.size(15, 15)
+                    source: "qrc:/images/assets/icons/respect_icon.png"
+                }
+
+                DescriptionText {
+                    font: Fonts.nunitoSans(14)
+                    Layout.preferredWidth: 50
+                    wrapMode: Text.WordWrap
+                    text: "33"
+                    horizontalAlignment: Text.AlignLeft
+                }
+            }
+
+            RowLayout {
+                Image {
+                    sourceSize: Qt.size(15, 15)
+                    source: "qrc:/images/assets/icons/519791-101_Warning-512.png"
+                }
+                DescriptionText {
+                    font: Fonts.nunitoSans(11)
+                    text: "50/37"
+                }
             }
         }
 

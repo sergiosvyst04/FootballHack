@@ -36,7 +36,7 @@ BasePage {
             spacing: 20
             Repeater {
                 model: ListModel {
-                    ListElement {name: "Players"}
+                    ListElement {name: "Players"; destination: "qrc:/Pages/TeamReviewPage.qml"}
                     ListElement {name: "Gallery"}
                     ListElement {name: "Calendar"; destination: "qrc:/Pages/TeamCalendarPage.qml" }
                     ListElement {name: "Results"}
