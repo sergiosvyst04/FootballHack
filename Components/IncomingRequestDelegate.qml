@@ -12,7 +12,12 @@ ColoredButton {
     property alias team: teamName.text
     property alias logo: logo.source
 
-    color: Colors.secondaryColor
+    signal acceptClicked()
+    signal rejectClicked()
+    signal cancelClicked()
+    onClicked: navigateToItem("qrc:/Pages/TeamReviewPage.qml")
+
+    color: state  === 1 ? Colors.winColor : model.state === 2 ? Colors.warningTextColor : Colors.secondaryColor
 
     ColumnLayout {
         anchors {
@@ -44,33 +49,66 @@ ColoredButton {
             DescriptionText {
                 id: requestState
 
-                visible: !isIncoming
+                visible: root.state !== 0
                 font: Fonts.nunitoSans(9)
                 text: root.state === 0 ? qsTr("Waiting for asnwer...") : root.state === 1 ? qsTr("Accepted!") : qsTr("Rejected!")
             }
 
-            ColoredButton {
-                id: acceptRequestButton
-                Layout.preferredHeight: 30
-                Layout.preferredWidth: 80
-                color: Colors.approveTextColor
-                visible: isIncoming
+            StackLayout {
+                Layout.fillWidth: true
+                currentIndex: root.state === 0 ? 1 : 0
 
-                text: qsTr("Accept")
-                font: Fonts.nunitoSans(8)
-                fontColor: Colors.white
-            }
+                 Item {
+                     ColoredButton {
+                         anchors {
+                             verticalCenter: parent.verticalCenter
+                             right: parent.right
+                             rightMargin: 20
+                         }
+                         height: 30
+                         width: 80
+                         text: qsTr("Cancel")
 
-            ColoredButton {
-                id: rejectRequestButton
-                Layout.preferredHeight: 30
-                Layout.preferredWidth: 80
-                color: Colors.warningTextColor
-                visible: isIncoming
+                         visible: isIncoming
+                         font: Fonts.nunitoSans(8)
+                         fontColor: Colors.white
+                         onClicked: cancelClicked()
+                     }
+                 }
 
-                text: qsTr("Reject")
-                font: Fonts.nunitoSans(8)
-                fontColor: Colors.white
+                RowLayout {
+
+                    Item {
+                        Layout.fillWidth: true
+                    }
+
+                    ColoredButton {
+                        id: acceptRequestButton
+                        Layout.preferredHeight: 30
+                        Layout.preferredWidth: 80
+                        color: Colors.approveTextColor
+                        visible: isIncoming
+
+                        text: qsTr("Accept")
+                        font: Fonts.nunitoSans(8)
+                        fontColor: Colors.white
+                        onClicked: acceptClicked()
+                    }
+
+                    ColoredButton {
+                        id: rejectRequestButton
+                        Layout.preferredHeight: 30
+                        Layout.preferredWidth: 80
+                        color: Colors.warningTextColor
+                        visible: isIncoming
+
+                        text: qsTr("Reject")
+                        font: Fonts.nunitoSans(8)
+                        fontColor: Colors.white
+                        onClicked: rejectClicked()
+                    }
+                }
+
             }
         }
     }

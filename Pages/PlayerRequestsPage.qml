@@ -29,8 +29,6 @@ BasePage {
             Layout.fillWidth: true
             Layout.preferredHeight: 50
 
-            currentIndex: requestsSwipeView.currentIndex
-
             spacing: 0
             background:  Rectangle {
                 color: Colors.transparentColor
@@ -47,53 +45,26 @@ BasePage {
             }
         }
 
-
-        SwipeView {
-            id: requestsSwipeView
+        ListView {
+            id: inComingRequestsListView
             Layout.fillHeight: true
             Layout.fillWidth: true
+
             clip: true
+            spacing: 30
+            model: requestsTabBar.currentIndex === 0 ? incomingRequestsModel : outComingRequestsModel
 
-            onCurrentIndexChanged: requestsTabBar.currentIndex = currentIndex
+            delegate: IncomingRequestDelegate {
+                isIncoming: requestsTabBar.currentIndex === 0 ? true : false
+                width: parent.width
+                height: 140
 
-            ListView {
-                id: inComingRequestsListView
-
-                clip: true
-                spacing: 30
-                model: incomingRequestsModel
-
-                delegate: IncomingRequestDelegate {
-                    isIncoming: true
-                    width: parent.width
-                    height: 140
-
-                    team: model.team
-                    logo: model.logo
-                }
-
-            }
-
-
-            ListView {
-                id: outComingRequestsListView
-
-                clip: true
-                spacing: 30
-                model: outComingRequestsModel
-
-                delegate: IncomingRequestDelegate {
-
-                    isIncoming: false
-                    width: parent.width
-                    height: 140
-                    team: model.team
-                    logo: model.logo
-                    state: model.state
-
-
-                    color: model.state === 1 ? Colors.winColor : model.state === 2 ? Colors.warningTextColor : Colors.secondaryColor
-                }
+                team: model.team
+                logo: model.logo
+                state: model.state
+                onAcceptClicked: model.state =  1
+                onRejectClicked: model.state = 2
+                onCancelClicked: model.state = 0
             }
         }
     }
@@ -101,9 +72,9 @@ BasePage {
     ListModel {
         id: incomingRequestsModel
 
-        ListElement {team: "FC Perfectial"; logo: "qrc:/images/assets/icons/PerfectialLogo.png"}
-        ListElement {team: "FC Liverpool"; logo: "qrc:/images/assets/icons/LiverpoolLogo.png"}
-        ListElement {team: "FC Barcelona"; logo: "qrc:/images/assets/icons/BarcelonaLogo.png"}
+        ListElement {team: "FC Perfectial"; logo: "qrc:/images/assets/icons/PerfectialLogo.png"; state: 0}
+        ListElement {team: "FC Liverpool"; logo: "qrc:/images/assets/icons/LiverpoolLogo.png"; state: 0}
+        ListElement {team: "FC Barcelona"; logo: "qrc:/images/assets/icons/BarcelonaLogo.png"; state: 0}
     }
 
     ListModel {
