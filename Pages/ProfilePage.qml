@@ -36,7 +36,7 @@ BasePage {
                 Layout.preferredWidth: 25
                 color: Colors.transparentColor
 
-                onClicked: console.log("click")
+                onClicked: navigateToItem("qrc:/Pages/PlayerSettingsPage.qml")
 
                 Image {
                     anchors.fill: parent
