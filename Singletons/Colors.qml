@@ -13,4 +13,9 @@ QtObject {
     readonly property color grey: "#C4C4C4"
     readonly property color activeSwitchColor: "#189E1E"
     readonly property color winColor: "#00FF0A"
+    readonly property color wateringBarBackgroundColor: "#06ADF4"
+    readonly property color proteinsColor: "#3AD821"
+    readonly property color fatsColor: "#FEA725"
+    readonly property color carbonHydratesColor: "#8D44D6"
+    readonly property color dishDelegateColor: Qt.rgba(106, 196, 74, 0.54)
 }

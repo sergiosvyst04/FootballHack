@@ -21,6 +21,7 @@ BasePage {
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: 30
             DescriptionText {
                 Layout.alignment: Qt.AlignLeft
                 font: Fonts.nunitoSansBold(13)
@@ -29,6 +30,19 @@ BasePage {
 
             Item {
                 Layout.fillWidth: true
+            }
+
+            ColoredButton {
+                Layout.preferredHeight: 25
+                Layout.preferredWidth: 25
+                color: Colors.transparentColor
+
+                onClicked: navigateToItem("qrc:/Pages/FeedPage.qml")
+
+                Image {
+                    anchors.fill: parent
+                    source: "qrc:/images/assets/icons/fire.png"
+                }
             }
 
             ColoredButton {

@@ -42,6 +42,8 @@
         <file>assets/icons/red_cross.png</file>
         <file>assets/icons/apply.png</file>
         <file>assets/icons/respect_icon.png</file>
+        <file>assets/icons/fire.png</file>
+        <file>assets/icons/WhiteWaterGlass.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

@@ -62,5 +62,12 @@
         <file>Components/IncomingRequestDelegate.qml</file>
         <file>Pages/TeamSettingsPage.qml</file>
         <file>Pages/PlayerSettingsPage.qml</file>
+        <file>Pages/CaloriesbalancePage.qml</file>
+        <file>Components/WateringProgressBar.qml</file>
+        <file>Components/NutrientCircularProgressBar.qml</file>
+        <file>Pages/FeedPage.qml</file>
+        <file>Components/MealTimeItem.qml</file>
+        <file>Pages/AddDishPage.qml</file>
+        <file>Components/DishTabButton.qml</file>
     </qresource>
 </RCC>
