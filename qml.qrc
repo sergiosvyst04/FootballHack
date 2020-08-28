@@ -69,5 +69,7 @@
         <file>Components/MealTimeItem.qml</file>
         <file>Pages/AddDishPage.qml</file>
         <file>Components/DishTabButton.qml</file>
+        <file>Pages/AddDishNextPage.qml</file>
+        <file>Pages/DishInfoPage.qml</file>
     </qresource>
 </RCC>

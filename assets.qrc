@@ -44,6 +44,8 @@
         <file>assets/icons/respect_icon.png</file>
         <file>assets/icons/fire.png</file>
         <file>assets/icons/WhiteWaterGlass.png</file>
+        <file>assets/icons/star_enabled.png</file>
+        <file>assets/icons/star_disabled.png</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/models/Countries_Cities</file>

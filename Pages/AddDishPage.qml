@@ -94,6 +94,7 @@ BasePage {
                     font: Fonts.nunitoSans(15)
                     color: Colors.white
                 }
+                onClicked: navigateToItem("qrc:/Pages/AddDishNextPage.qml", {dishName: text})
             }
         }
 
